@@ -10,7 +10,7 @@ public class commandParser {
     public commandContainer parse(String raw, MessageReceivedEvent event) {
 
         String beheaded = raw.replaceFirst(STATIC.PREFIX, "" );
-        String[] splitBeheaded = beheaded.split("");
+        String[] splitBeheaded = beheaded.split(" ");
         String invoke = splitBeheaded[0];
         ArrayList<String> split = new ArrayList<>();
         for (String s : splitBeheaded) {
@@ -23,7 +23,7 @@ public class commandParser {
     }
 
 
-    public class commandContainer {
+    public static class commandContainer {
 
         public final String raw;
         public final String beheaded;

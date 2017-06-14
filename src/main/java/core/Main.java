@@ -31,7 +31,7 @@ public class Main {
         addCommand();
 
         try {
-            JDA jda = builder.buildBlocking();
+            builder.buildBlocking();
         } catch (LoginException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {
